@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TeleNUS</title>
+    <meta name="description" content="Just another community-maintained platform for managing NUS-related Telegram groups.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>TeleNUS</h1>
+      <input id="search_bar" type="text" placeholder="Search">
+    </header>
+    <main>
+      <ul id="groups_list"></ul>
+    </main>
+    <footer>
+      <section>
+        <h1>What is TeleNUS?</h1>
+        <p>TeleNUS is a community-maintained platform for managing NUS-related Telegram groups. Users can add and remove groups using the <a href="https://t.me/telenus_bot">TeleNUS bot</a> and browse groups using the <a href="https://telenus.nuscomputing.com">TeleNUS server</a>.</p>
+      </section>
+      <section>
+        <h1>What does it mean to be community-maintained?</h1>
+        <p>By design, all users are given the freedom to add any groups into TeleNUS to encourage diversity of groups. To counteract malicious users from adding inappropriate groups, all users are also given the power to remove any groups from TeleNUS. Since the power of curation is distributed equally among all users, TeleNUS is effectively maintained by the community of users.</p>
+      </section>
+      <section>
+        <h1>How to add a group into TeleNUS?</h1>
+        <p>Add <a href="https://t.me/telenus_bot">@telenus_bot</a> into the group, promote it to an administrator, and run the /add command.</p>
+      </section>
+      <section>
+        <h1>How to remove a group from TeleNUS?</h1>
+        <p>Run the /remove command.</p>
+      </section>
+      <section>
+        <h1>What are legacy groups?</h1>
+        <p>Legacy groups are groups that were previously registered under nusmodchat. Since the TeleNUS bot is not an administrator in these groups, certain features will be unavailable. All legacy groups will be removed from TeleNUS at the end of January.</p>
+      </section>
+      <section>
+        <h1>How to convert a legacy group to a non-legacy group?</h1>
+        <p>Add <a href="https://t.me/telenus_bot">@telenus_bot</a> into the group, promote it to an administrator, run the /remove command first, then run the /add command. The removal step is required to remove the group as a legacy group.</p>
+      </section>
+      <section>
+        <h1>Why does TeleNUS bot requires administrative rights?</h1>
+        <p>Administrative rights are required to generate the group link. They are also needed to automatically remove the alert messages when a user entered or leave the chat.</p>
+      </section>
+      <section>
+        <h1>Who created TeleNUS?</h1>
+        <p>This is written by <a href="https://t.me/eugenood" target="_blank">@eugenood</a>. Check out the code <a href="https://github.com/eugenood/telenus">here</a>.</p>
+      </section>
+    </footer>
+  </body>
+</html>
