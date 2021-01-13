@@ -69,7 +69,7 @@ class Bot {
   }
 
   startPolling() {
-    this.bot.startPolling();
+    this.bot.launch();
   }
 
 }
