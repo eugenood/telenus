@@ -32,7 +32,6 @@ class Bot {
     
       }).catch(err => {
     
-        console.log(err);
         return ctx.reply("Error. Please add me as an admin and try again.");
     
       });
@@ -55,11 +54,15 @@ class Bot {
     });
 
     this.bot.on("new_chat_title", ctx => {
-      db.updateGroupTitle(ctx.chat.id, ctx.chat.title);
+      if (db.groupExist(ctx.chat.id)) {
+        db.updateGroupTitle(ctx.chat.id, ctx.chat.title);
+      }
     });
 
     this.bot.on(['new_chat_members', 'left_chat_member'], ctx => {
-      ctx.deleteMessage(ctx.message.message_id);
+      if (db.groupExist(ctx.chat.id)) {
+        ctx.deleteMessage(ctx.message.message_id);
+      }
     });
     
   }
