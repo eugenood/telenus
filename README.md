@@ -6,7 +6,7 @@ Just another community-maintained platform for managing NUS-related Telegram gro
 
 ### What is TeleNUS?
 
-TeleNUS is a community-maintained platform for managing NUS-related Telegram groups. Users can add and remove groups using the [TeleNUS bot](https://t.me/telenus_bot) and browse groups using the [TeleNUS server](https://telenus.nuscomputing.com).
+TeleNUS is a community-maintained platform for managing NUS-related Telegram groups. Users can add and remove groups using the [TeleNUS bot](https://t.me/telenus_bot) and browse groups on the [TeleNUS website](https://telenus.nusmods.com).
 
 ### What does it mean to be community-maintained?
 
@@ -22,7 +22,7 @@ Run the `/remove` command.
 
 ### What are legacy groups?
 
-Legacy groups are groups that were previously registered under nusmodchat. Since the TeleNUS bot is not an administrator in these groups, certain features will be unavailable. All legacy groups will be removed from TeleNUS at the end of January. 
+Legacy groups are groups that were previously registered under nusmodchat. Since the TeleNUS bot is not an administrator in these groups, certain features will be unavailable. All legacy groups will be removed from TeleNUS at the end of January.
 
 ### How to convert a legacy group to a non-legacy group?
 
