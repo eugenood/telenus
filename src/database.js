@@ -10,7 +10,7 @@ class Database {
   }
 
   addGroup(id, title, link) {
-    const group = { id, title, link, legacy: false };
+    const group = { id, title, link };
     this.db.get("groups").push(group).write();
   }
 
@@ -32,10 +32,6 @@ class Database {
   
   groupExist(id) {
     return this.db.get("groups").find({ id }).size() > 0;
-  }
-
-  nonLegacyGroupExist(id) {
-    return this.db.get("groups").find({ id, legacy: false }).size() > 0;
   }
 
 }

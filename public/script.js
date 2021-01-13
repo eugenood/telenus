@@ -15,11 +15,7 @@ function displayGroups(groups) {
   groupsList.innerHTML = "";
   groups.forEach(group => {
     const listItem = document.createElement("li");
-    if (group.legacy) {
-      listItem.innerHTML = `<a href="${group.link}" target="_blank">${group.title}<span class="legacy">Legacy</span></a>`;
-    } else {
-      listItem.innerHTML = `<a href="${group.link}" target="_blank">${group.title}</a>`;
-    }
+    listItem.innerHTML = `<a href="${group.link}" target="_blank">${group.title}</a>`;
     groupsList.appendChild(listItem);
   });
 }

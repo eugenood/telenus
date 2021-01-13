@@ -21,7 +21,7 @@ class Bot {
       }
     
       if (db.groupExist(ctx.chat.id)) {
-        return ctx.reply("This group has already been added. If you are migrating from nusmodchat, remember to run /remove first before adding.");
+        return ctx.reply("This group has already been added.");
       }
     
       ctx.exportChatInviteLink().then(async inviteLink => {
@@ -55,15 +55,11 @@ class Bot {
     });
 
     this.bot.on("new_chat_title", ctx => {
-      if (db.nonLegacyGroupExist(ctx.chat.id)) {
-        db.updateGroupTitle(ctx.chat.id, ctx.chat.title);
-      }
+      db.updateGroupTitle(ctx.chat.id, ctx.chat.title);
     });
 
     this.bot.on(['new_chat_members', 'left_chat_member'], ctx => {
-      if (db.nonLegacyGroupExist(ctx.chat.id)) {
-        ctx.deleteMessage(ctx.message.message_id);
-      }
+      ctx.deleteMessage(ctx.message.message_id);
     });
     
   }

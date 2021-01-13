@@ -20,14 +20,6 @@ Add [@telenus_bot](https://t.me/telenus_bot) into the group, promote it to an ad
 
 Run the `/remove` command.
 
-### What are legacy groups?
-
-Legacy groups are groups that were previously registered under nusmodchat. Since the TeleNUS bot is not an administrator in these groups, certain features will be unavailable. All legacy groups will be removed from TeleNUS at the end of January.
-
-### How to convert a legacy group to a non-legacy group?
-
-Add [@telenus_bot](https://t.me/telenus_bot) into the group, promote it to an administrator, run the `/remove` command, then run the `/add` command. The removal step is required to remove the group as a legacy group.
-
 ### Why does TeleNUS bot requires administrative rights?
 
 Administrative rights are required to generate the group link. They are also needed to automatically remove the alert messages when a user entered or leave the chat.
