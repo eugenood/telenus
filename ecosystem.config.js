@@ -3,9 +3,7 @@ module.exports = {
     {
       name: "TeleNUS",
       script: "main.js",
-
-      // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
-      watch: true,
+      watch: false,
       max_memory_restart: "250M",
       env: {
         NODE_ENV: "development",
@@ -13,6 +11,10 @@ module.exports = {
       env_production: {
         NODE_ENV: "production",
       },
+      error_file: ".logs/error.log",
+      out_file: ".logs/out.log",
+      log_file: ".logs/combined.log",
+      time: true,
     },
   ],
 };

@@ -1,3 +1,4 @@
 .env
+.logs
 node_modules
 db.json

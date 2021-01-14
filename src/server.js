@@ -1,20 +1,29 @@
 const express = require("express");
+const path = require("path");
 
 class Server {
 
-  constructor(port, db) {
+  constructor(port, botToken, db) {
 
     this.app = express();
     this.port = port;
 
     this.app.use(express.static("public"));
 
-    this.app.get('/', (request, response) => {
+    this.app.get("/", (request, response) => {
       response.sendFile(__dirname + "/public/index.html");
     });
 
-    this.app.get('/groups', (request, response) => {
+    this.app.get("/groups", (request, response) => {
       response.send(db.getGroups());
+    });
+
+    this.app.get("/logs", (request, response) => {
+      if (request.query.token === botToken) {
+        response.sendFile(path.resolve(".logs/combined.log"));
+      } else {
+        response.send("");
+      }
     });
 
   }
