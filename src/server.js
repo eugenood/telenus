@@ -26,6 +26,15 @@ class Server {
       }
     });
 
+    this.app.get("/remove", (request, response) => {
+      if (request.query.token === botToken) {
+        if (db.groupExist(request.query.id)) {
+          db.removeGroup(request.query.id);
+        }
+      }
+      response.send("");
+    });
+
   }
 
   startPolling() {
