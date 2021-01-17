@@ -28,8 +28,8 @@ class Server {
 
     this.app.get("/remove", (request, response) => {
       if (request.query.token === botToken) {
-        if (db.groupExist(request.query.id)) {
-          db.removeGroup(request.query.id);
+        if (db.groupExist(parseInt(request.query.id))) {
+          db.removeGroup(parseInt(request.query.id));
         }
       }
       response.send("");
