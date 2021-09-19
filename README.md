@@ -1,5 +1,7 @@
 # TeleNUS
 
+**:warning: This repository is no longer maintained. For the maintained repository, visit https://github.com/nusmodifications/telenus. :warning:**
+
 Just another community-maintained platform for managing NUS-related Telegram groups.
 
 ## Overview
